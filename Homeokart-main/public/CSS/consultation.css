@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+input,
+select,
+textarea {
+    /* outline: none !important; */
+    box-shadow: none !important;
+}
+
+.input-group {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+
+.form-floating {
+    width: 100% !important;
+}
+
+#main {
+    margin: 6rem auto;
+}
+
+/* Appointment Section */
+
+
+
+#appointment-div {
+    margin-top: 150px;
+}
+
+
+
+/* doctor section */
+
+#doctor-section {
+    padding: 100px 0;
+}
+
+#doctor-head {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#doctor-section.details-card {
+    background: #ecf0f1;
+}
+
+#doctor-section .doc-card {
+    margin: 0 auto 3rem;
+}
+
+#doctor-section .card-content {
+    background: #ffffff;
+    border: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+#doctor-section .card-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    z-index: 1;
+}
+
+#doctor-section .card-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#doctor-section .card-img span {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    background: #17a2b8;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+
+#doctor-section .card-img span h4 {
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 5px;
+    line-height: 0;
+}
+
+#doctor-section .card-desc {
+    padding: 1.25rem;
+    height: 200px;
+}
+
+#doctor-section .card-desc h3 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#doctor-section .card-desc h4 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#doctor-section .card-desc p {
+    color: #747373;
+    font-size: 14px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#doctor-section .btn-card {
+    /* background-color: #1ABC9C; */
+    background-color: #17a2b8;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+#doctor-section .btn-card:hover {
+    background: #1ABC9C;
+}
+
+#doctor-section .button-div {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+#doctor-section a.btn-card {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    /* margin: auto; */
+}

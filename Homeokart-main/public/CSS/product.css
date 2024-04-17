@@ -1,0 +1,371 @@
+/* .nav-cont {
+    height: 500px;
+    background-color: black;
+} */
+
+body {
+    overflow-x: hidden !important;
+    width: 100%;
+    background-color: #f3f3f3 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bod-cont {
+    /* width: 50%; */
+    padding: 0 1rem;
+}
+
+nav {
+    width: 100% !important;
+}
+
+.nav-brand-container {
+    margin: 0 3rem 0 0 !important;
+}
+
+.navbar-brand {
+    font-size: 25px !important;
+    font-family: 'Fredoka One';
+    padding-left: 15px;
+    padding-bottom: 0px !important;
+    /* margin: auto !important; */
+}
+
+.nav-link {
+    padding: 0 !important;
+}
+
+.item1 .nav-link {
+    /* padding-left: 20px; */
+    /* padding: 0px 50px 0px 50px; */
+    /* font-size: 1rem !important; */
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+
+}
+
+.items {
+    /* margin: auto !important; */
+    /* .navbar-expand-lg .navbar-nav { */
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.flex-around {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.navbar-collapse {
+    /* flex-grow: 0 !important; */
+    margin: auto !important;
+}
+
+.item1 {
+    padding: 0px 20px 0 0 !important;
+}
+
+.item2 {
+    margin: 0px 30px !important;
+}
+
+.search-bar {
+    /* width: 500px !important;
+    height: 50px !important; */
+    border: 1px solid black !important;
+    box-shadow: none !important;
+    /* height: fit-content; */
+    /* padding: 10px 15px !important; */
+    /* font-size: 20px !important; */
+    font-size: 1rem !important;
+
+}
+
+/* .search-bar:focus {
+    outline: none !important;
+    -webkit-appearance: none !important;
+} */
+
+.logo {
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 15px;
+    padding-top: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 0px !important;
+}
+
+.card {
+    /* margin-top: 100px;
+    margin-left: 20px; */
+    width: 18rem;
+}
+
+.item2 .btn {
+    /* width: 150px !important; */
+    /* font-size: 20px !important; */
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+/* .nav-right-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+} */
+
+.item3 {
+    padding: 0px 10px !important;
+    /* font-size: 20px !important; */
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+
+
+/* Product body */
+
+.prd-body {
+    width: 100%;
+    height: fit-content !important;
+    margin-top: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row !important;
+
+}
+
+.prd-img {
+    /* height: ; */
+    padding: 20px;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    margin: auto !important;
+}
+
+.prd-content {
+    height: fit-content;
+    width: 57%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.imag {
+    /* width: 40% !important; */
+    height: 500px !important;
+    margin: auto;
+}
+
+.imag-nav {
+    width: 200px;
+    height: 200px;
+}
+
+.slider-for {
+    height: 500px;
+    /* width: 40% !important; */
+    /* margin: auto !important; */
+}
+
+.prd-img .slick-slide {
+    /* width: 40% !important; */
+    border: 1px solid lightgray;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-track {
+    /* width: 40% !important; */
+}
+
+.prd-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.hdr {
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    margin: 10px;
+}
+
+.categ {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+}
+
+.itm {
+    background-color: whitesmoke;
+    color: black;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.adj {
+    color: green;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.prc {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+}
+
+.prc .amt {
+    color: black;
+    font-size: 35px;
+    margin: 0px 10px;
+}
+
+.prc .dsc {
+    color: green;
+    font-weight: 500;
+    font-size: 25px;
+    margin: auto 10px;
+}
+
+.rate {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    align-items: baseline;
+    /* justify-content: space-around; */
+    /* vertical-align: baseline; */
+}
+
+.rate .stars {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: #26a541;
+    color: white;
+    vertical-align: baseline;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px 15px;
+    padding: 0px 10px;
+}
+
+.rate .fas {
+    font-size: 15px;
+    vertical-align: baseline !important;
+    /* margin-bottom: 15px; */
+}
+
+.norat {
+    color: gray;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0px 15px;
+}
+
+.assure {
+    margin: 0px 10px;
+    font-style: italic;
+    font-weight: 500;
+    background-color: #2874f0;
+    border-radius: 30px;
+    padding: 0px 8px;
+    color: white;
+    margin: 0px 15px;
+}
+
+.assure span {
+    font-size: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 2px 9px;
+    color: #2874f0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    margin-top: 40px;
+}
+
+.inf {
+    font-size: 20px;
+    /* font-weight: 500; */
+    color: black;
+
+}
+
+.inf i {
+    margin-right: 5px;
+    color: #26a541;
+}
+
+.buy-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.bton1 {
+    margin: 20px;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    padding: 10px 50px !important;
+}
+
+.bton2 {
+    margin: 20px;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    padding: 10px 50px !important;
+}
+
+.services {
+    display: flex;
+    flex-direction: row !important;
+    margin: 10px 0px;
+    /* justify-content:; */
+}
+
+.src {
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    height: fit-content;
+    /* padding: 10px; */
+    margin: 10px 0px;
+}
+
+.src img {
+    width: 50px;
+    margin: auto;
+}
+
+.src div {
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0px 10px;
+}

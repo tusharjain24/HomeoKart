@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.payment-successful-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes smallBig {
+    0% {width:100px;}
+    50% {width:140px;}
+    100% {width:100px;}
+  }
+
+.check-image-div{
+    width: 100px;
+    animation: smallBig 3s infinite;
+    height: 150px;
+}
+
+.check-image-div img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

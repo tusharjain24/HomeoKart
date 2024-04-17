@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doccure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link href="/doccure/img/favicon.png" rel="icon" />
+
+    <link rel="stylesheet" href="/doccure/css/bootstrap.min.css" />
+
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/doccure/daterangepicker/daterangepicker.css">
+    </link>
+
+    <link rel="stylesheet" href="/doccure/css/feather.css" />
+
+    <link rel="stylesheet" href="/doccure/CSS/style.css" />
+
+    <link rel="stylesheet" href="/CSS/navbarFooter.css" />
+
+    <link rel="stylesheet" href="assets/plugins/apex/apexcharts.css">
+    
+    <link href="/CSS/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+     <!-- NAVBAR STARTS -->
+     <header id="header" class="fixed-top">
+        <div class="container header-container">
+
+            <h1 class="logo me-auto"><a href="/">HomeoKart</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/categories">Medicines</a></li>
+                    <li><a class="nav-link scrollto" href="/consultation">Doctors</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="/uploadData">UploadData</a></li> -->
+                    <li><a class="nav-link scrollto" href="/cart">Cart</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+            <li><a href="/room">ROOM</a></li>
+            <li><a href="/docProfile/623607e3060c92c64c4d18fd">Doctor profile</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+        </ul>
+    </li> -->
+
+                    <li><a class="nav-link scrollto" href="/myProfile">My Profile</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href=<%= isAuthenticated ? "/logout" : "/login" %>
+                class="appointment-btn scrollto"><%= isAuthenticated ? "Logout" : "Login" %></a>
+
+        </div>
+    </header>
+    <!-- NAVBAR ENDS -->
+
+    <div class="main-wrapper" style="margin:7rem auto">
+        <!-- <div class="content">
+            <div class="container-fluid">
+                <div class="row"> -->
+                    <!-- <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+
+                        <div class="profile-sidebar">
+                             <div class="widget-profile pro-widget-content">
+                                <div class="profile-info-widget">
+                                    <a href="#" class="booking-doc-img">
+                                    <img src="/doccure/pat-app img/doctors/doctor-thumb-02.jpg" alt="User Image">
+                                    </a>
+                                    <div class="profile-det-info">
+                                        <h3>Dr. Darren Elder</h3>
+                                        <div class="patient-details">
+                                            <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                    <!-- <div class="dashboard-widget">
+                                <nav class="dashboard-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="/">
+                                                <i class="fas fa-columns"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="appointments.html">
+                                                <i class="fas fa-calendar-check"></i>
+                                                <span>Appointments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="my-patients.html">
+                                                <i class="fas fa-user-injured"></i>
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="schedule-timings.html">
+                                                <i class="fas fa-hourglass-start"></i>
+                                                <span>Medicines</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="available-timings.html">
+                                                <i class="fas fa-clock"></i>
+                                                <span>Cart</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="invoices.html">
+                                                <i class="fas fa-file-invoice"></i>
+                                                <span>Invoices</span>
+                                            </a>
+                                        </li> -->
+                    <!-- <li>
+                                            <a href="accounts.html">
+<i class="fas fa-file-invoice-dollar"></i>
+<span>Accounts</span>
+</a>
+                                        </li>
+                                        <li>
+                                            <a href="reviews.html">
+<i class="fas fa-star"></i>
+<span>Reviews</span>
+</a>
+                                        </li>
+                                        <li>
+                                            <a href="chat-doctor.html">
+<i class="fas fa-comments"></i>
+<span>Message</span>
+<small class="unread-msg">23</small>
+</a>
+                                        </li>
+                                        <li>
+                                            <a href="doctor-profile-settings.html">
+<i class="fas fa-user-cog"></i>
+<span>Profile Settings</span>
+</a>
+                                        </li>
+                                        <li>
+                                            <a href="social-media.html">
+<i class="fas fa-share-alt"></i>
+<span>Social Media</span>
+</a>
+                                        </li>
+                                        <li>
+                                            <a href="doctor-change-password.html">
+<i class="fas fa-lock"></i>
+<span>Change Password</span>
+</a>
+                                        </li> -->
+                    <!-- <li>
+                                            <a href="index.html">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div> -->
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-7 col-lg-8 col-xl-9">
+                        <div class="appointments">
+
+                            <% info.appointments.forEach(function(appointment) {%>
+
+                            <div class="appointment-list">
+                                <div class="profile-info-widget">
+                                    <a href="patient-profile.html" class="booking-doc-img">
+                                        <img src="/doccure/pat-app img/doctors/doctor-thumb-02.jpg" loading="lazy"
+                                            alt="User Image">
+                                    </a>
+                                    <div class="profile-det-info">
+                                        <h3><a href="patient-profile.html"><%=appointment.name%></a></h3>
+                                        <div class="patient-details">
+                                            <h5><i class="fas fa-graduation-cap"></i> <%=appointment.department%></h5>
+                                            <h5><i class="far fa-clock"></i> <%=appointment.date%>,
+                                                <%=appointment.time%></h5>
+                                            <h5><i class="fas fa-map-marker-alt"></i> Sahyajigunj, Vadodara</h5>
+                                            <h5><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection"
+                                                    class="__cf_email__"
+                                                    data-cfemail="c7b5aea4afa6b5a387a2bfa6aab7aba2e9a4a8aa">[email&#160;protected]</a>
+                                            </h5>
+                                            <h5 class="mb-0"><i class="fas fa-phone"></i>923 782 4575</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="appointment-action">
+                                    <!-- <a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal"
+                                        data-bs-target="#appt_details">
+                                        <i class="far fa-eye"></i> View
+                                    </a> -->
+                                    <a href="<%=appointment.roomId%>" class="btn btn-sm bg-success-light">
+                                        <i class="fas fa-check"></i> Join
+                                    </a>
+                                    <!-- <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="fas fa-times"></i> Decline
+                                    </a> -->
+                                </div>
+                            </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade custom-modal" id="appt_details">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Appointment Details</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="info-details">
+                                    <li>
+                                        <div class="details-header">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span class="title">#APT0001</span>
+                                                    <span class="text">21 Oct 2019 10:00 AM</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-end">
+                                                        <button type="button" class="btn bg-success-light btn-sm"
+                                                            id="topup_status">Completed</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="title">Status:</span>
+                                        <span class="text">Completed</span>
+                                    </li>
+                                    <li>
+                                        <span class="title">Confirm Date:</span>
+                                        <span class="text">29 Jun 2019</span>
+                                    </li>
+                                    <li>
+                                        <span class="title">Paid Amount</span>
+                                        <span class="text">$450</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER STARTS -->
+                <footer id="footer">
+
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-3 col-md-6 footer-contact">
+                                    <h3>Homeokart</h3>
+                                    <p>
+                                        A108 Adam Street <br>
+                                        New York, NY 535022<br>
+                                        United States <br><br>
+                                        <strong>Email:</strong>Homeokart007@gmail.com<br>
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-2 col-md-6 footer-links">
+                                    <h4>Useful Links</h4>
+                                    <ul>
+                                        <li><i class="fa fa-solid fa-angle-right"></i> <a href="/">Home</a>
+                                        </li>
+                                        <li><i class="fa fa-solid fa-angle-right"></i> <a
+                                                href="/categories">Medicines</a></li>
+                                        <li><i class="fa fa-solid fa-angle-right"></i> <a
+                                                href="/consultation">Consultation</a></li>
+                                        <li><i class="fa fa-solid fa-angle-right"></i> <a href="/myProfile">My
+                                                Profile</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>Our Services</h4>
+                                    <ul>
+                                        <% for(var i=0; i<category.length; i++) { %>
+                                        <li><i class="fa fa-solid fa-angle-right"></i> <a
+                                                href="/products/<%=category[i].name%>"><%=category[i].name%></a>
+                                        </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 footer-newsletter">
+                                    <h4>Join Our Newsletter</h4>
+                                    <p>Get a free subscription to our health and fitness tip and stay tuned
+                                        to our latest offers</p>
+                                    <form action="" method="post">
+                                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container d-md-flex py-4">
+
+                        <div class="me-md-auto text-center text-md-start">
+                            <div class="copyright">
+                                &copy; Copyright <strong><span>Homeokart</span></strong>. All Rights
+                                Reserved
+                            </div>
+                            <div class="credits">
+                                Designed by <a href="#">HomeoKart</a>
+                            </div>
+                        </div>
+                        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- FOOTER ENDS -->
+
+
+
+
+
+
+
+
+
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+                </script>
+                <script src="/doccure/js/jquery-3.6.0.min.js"></script>
+
+                <script src="/doccure/js/bootstrap.bundle.min.js"></script>
+
+
+                <script src="/doccure/js/moment.min.js"></script>
+                <script src="/doccure/daterangepicker/daterangepicker.js"></script>
+
+                <script src="/doccure/fancybox/jquery.fancybox.min.js"></script>
+
+                <script src="/doccure/js/feather.min.js"></script>
+
+                <script src="/doccure/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

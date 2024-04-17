@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/CSS/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/CSS/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/CSS/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- CSS File -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/card.css" rel="stylesheet"> -->
+
+    <!-- CSS File -->
+    <link href="/CSS/consultation.css" rel="stylesheet">
+    <link href="/CSS/navbarFooter.css" rel="stylesheet" />
+
+
+
+
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+    <!-- NAVBAR STARTS -->
+    <header id="header" class="fixed-top">
+        <div class="container header-container">
+
+            <h1 class="logo me-auto"><a href="/">HomeoKart</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/categories">Medicines</a></li>
+                    <li><a class="nav-link scrollto" href="/consultation">Doctors</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="/uploadData">UploadData</a></li> -->
+                    <li><a class="nav-link scrollto" href="/cart">Cart</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/room">ROOM</a></li>
+                            <li><a href="/docProfile/623607e3060c92c64c4d18fd">Doctor profile</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li><a class="nav-link scrollto" href="/myProfile">My Profile</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href=<%= isAuthenticated ? "/logout" : "/login" %>
+                class="appointment-btn scrollto"><%= isAuthenticated ? "Logout" : "Login" %></a>
+
+        </div>
+    </header>
+    <!-- NAVBAR ENDS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="details-card" id="doctor-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="doctor-head">Doctors</h2>
+                <p>
+                    Magnam dolores commodi suscipit. Necessitatibus eius
+                    consequatur ex aliquid fuga eum quidem. Sit sint consectetur
+                    velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                    impedit suscipit alias ea. Quia fugiat sit in iste officiis
+                    commodi quidem hic quas.
+                </p>
+            </div>
+            <div class="row">
+
+                <% docData.forEach(function(doc) {%>
+                <div class="col-md-3">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" loading="lazy" alt="" />
+                        <span><h4>
+                            <i class="fa-solid fa-star"></i>
+                            <%=doc.ratings%>/5
+                        </h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3><%=doc.username%></h3>
+                            <h4><%=doc.department%></h4>
+                            <p> <%=doc.description%></p>
+                        </div>
+                        <div class="button-div"><a href="/docProfile/<%=doc.id%>" class="btn-card">Request Consultation</a></div> 
+                    </div>
+                </div>
+                <% })%>
+                <!-- <div class="col-md-3">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="" />
+                            <span><h4>
+                                <i class="fa-solid fa-star"></i>
+                                4.5/5
+                            </h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>Sarah Jhonson</h3>
+                            <h4>Anesthesiologist</h4>
+                            <p>
+                                Aut maiores voluptates amet et quis praesentium
+                                qui senda para</p>
+                                  <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="" />
+                            <span><h4>
+                                <i class="fa-solid fa-star"></i>
+                                4/5
+                            </h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>William Anderson</h3>
+                            <h4>Cardiology</h4>
+                            <p>Quisquam facilis cum velit laborum corrupti fuga
+                                rerum quia</p>
+                                 <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt="" />
+                            <span><h4>
+                                <i class="fa-solid fa-star"></i>
+                                3/5
+                            </h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>Amanda Jepson</h3>
+                            <h4>Neurosurgeon</h4>
+                            <p>Dolorum tempora officiis odit laborum officiis
+                                et et accusamus</p>
+                                <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                                
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            </div>
+        </div>
+    </section>
+        <!-- Footer  -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Homeokart</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                New York, NY 535022<br>
+                                United States <br><br>
+                                <strong>Phone:</strong> +91 55895 54885<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                        </div>
+    
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Join Our Newsletter</h4>
+                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            </form>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container d-md-flex py-4">
+    
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Homeokart</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="#">HomeoKart</a>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+    
+        </footer><!-- End Footer -->
+    
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

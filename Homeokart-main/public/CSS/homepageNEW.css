@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    box-shadow: none !important;
+}
+
+#main {
+    margin: 3rem 5rem;
+}
+
+#main #slider .container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FEATURES SECTION */
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    background-color: var(--veryLightGray);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+
+}
+
+h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.features {
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    /* margin-top: 100px; */
+}
+
+.features p {
+    margin: 0 auto;
+    line-height: 2;
+    color: var(--grayishBlue);
+}
+
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+}
+
+.features-img-div {
+    display: flex;
+    /* height: 200px; */
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+.features-img-div img {
+    /* float: right; */
+    margin: 0;
+    /* width: 200px; */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+
+.red {
+    border-top: 3px solid var(--red);
+}
+
+.blue {
+    border-top: 3px solid var(--blue);
+}
+
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+
+    .box {
+        width: 25%;
+    }
+
+    .features p {
+        width: 40%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALL MEDICINES SECTION */
+
+.product-section {
+    margin: 5rem auto;
+    padding: 1rem;
+    /* border: 1px solid #121212; */
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.3);
+    border-radius: 15px;
+}
+
+.product-section h2 {
+    padding: 1rem 0;
+    color: cornflowerblue;
+    font-weight: 600;
+}
+
+.product-section hr {
+    /* width: 15%; */
+    background-color: #9328ff;
+}
+
+/* .product-container {
+    padding: 1rem;
+    margin: 0;
+    width: fit-content;
+} */
+
+.product-card {
+    color: black;
+    padding: 1rem !important;
+    /* height: 400px; */
+    /* border: 1px solid #121212; */
+    border-radius: 10px;
+}
+
+.view-all-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-all-div a {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.product-card-inner {
+    padding: 1rem;
+    /* border: 2px solid rgb(230, 230, 230); */
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    background: rgb(2, 0, 36);
+
+
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #b9dcff 0%, #f0e1ff 100%);
+
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #e4f2ff 0%, #f2e6ff 100%);
+
+    /* background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(212, 236, 255) 0%, rgb(228, 251, 255) 90.1%); */
+
+}
+
+.product-card-inner:hover {
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.product-card .product-discount {
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.product-card-img {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-card-img img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-card-img img:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+    /* filter: brightness(90%); */
+}
+
+.product-card h5 {
+    font-size: 1.2rem;
+}
+
+.product-card .product-brand {
+    color: #6f7284;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.product-card .product-price {
+    color: #6f7284;
+}
+
+.product-card .product-price .new-price {
+    color: red;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDICINE CATEGORIES SECTION */
+
+#all-medicine-categories .category-card {
+    color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 400px; */
+    border-radius: 10px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #e4f2ff 0%, #f2e6ff 100%);
+}
+
+#all-medicine-categories .category-card .category-card-img-div {
+    display: flex;
+    /* height: 200px; */
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+#all-medicine-categories .category-card .category-card-img-div img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#all-medicine-categories .category-card .category-card-title {
+    color: #9328ff;
+    color: cornflowerblue;
+}
+
+
+
+
+
+
+
+
+
+
+/* DOCTOR CONSULTATION CARDS SECTION */
+
+.member {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #e4f2ff 0%, #f2e6ff 100%);
+    margin: 1rem auto;
+    /* padding: 1rem !important; */
+    min-height: 300px;
+}
+
+.pic {
+    min-width: 180px;
+}
+
+.doctor-ratings {
+    position: relative;
+    /* width: 200px; */
+    right: -350px;
+    top: -120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.member-info p {
+    /* width: 40%; */
+}
+
+.social {
+    margin: 0 auto 1rem;
+}
+
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    /* display: block; */
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

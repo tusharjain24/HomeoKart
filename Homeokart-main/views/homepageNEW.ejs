@@ -1,0 +1,566 @@
+<!-- <%- include('partials/header',{isAuthenticated:isAuthenticated}) %> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>HomeoKart</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+
+    <!-- Vendor CSS Files -->
+    <link href="/CSS/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/CSS/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link href="/CSS/navbarFooter.css" rel="stylesheet" />
+    <link href="/CSS/card.css" rel="stylesheet">
+    <link href="/CSS/homepageNEW.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/5b2ed83021.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR STARTS -->
+    <header id="header" class="fixed-top">
+        <div class="container header-container">
+
+            <h1 class="logo me-auto"><a href="/">HomeoKart</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li>
+                        <a class=<%= isAuthenticated && isAdmin ? "nav-link scrollto" : "nav-link scrollto hidden" %>
+                            href="/uploadData">Upload Data</a>
+                    </li>
+                    <li><a class="nav-link scrollto" href="/categories">Medicines</a></li>
+                    <li><a class="nav-link scrollto" href="/consultation">Doctors</a></li>
+                    <li><a class="nav-link scrollto" href="/cart">Cart</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/room">ROOM</a></li>
+                            <li><a href="/docProfile/623607e3060c92c64c4d18fd">Doctor profile</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li><a class="nav-link scrollto" href="/myProfile">My Profile</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href=<%= isAuthenticated ? "/logout" : "/login" %>
+                class="appointment-btn scrollto"><%= isAuthenticated ? "Logout" : "Login" %></a>
+
+        </div>
+    </header>
+    <!-- NAVBAR ENDS -->
+
+
+
+
+
+
+
+
+
+    <main id="main">
+
+        <!--  CAROUSEL SECTION  -->
+        <section id="slider" class="">
+            <div class="container">
+
+                <div class="row">
+                    <div class="banner-container">
+                        <div id="carouselExampleIndicators" class="carousel slide  carousel-fade"
+                            data-bs-ride="carousel " data-interval="3000">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active" data-interval="2000">
+                                    <img src="/images/1.jpg" loading="lazy" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <img src="/images/2.jpg" loading="lazy" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <img src="/images/3.jpg" loading="lazy" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <!-- End  Section -->
+
+
+
+
+        <!--  FEATURES CARD SECTION  -->
+        <!-- <section id="about" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Why Homeopathy?</h2>
+                    <p>Homeopathy cures a greater percentage of cases than any other method of treatment. Homeopathy is
+                        the latest and refined method of treating patients economically and non-violently.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <img src="Images/6.jpeg">
+                            <p>Homeopathic treatment is becoming more popular on account of its low cost and efficiancy.
+                                Especially after the pandemic number of people using homeopathy have increased.
+                                HomeoKart ensures fast and easy service of homeopathic medicine at your doorstep.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <img src="Images/6.jpeg">
+                            <p> Self prescribing without doctor's concern is never safe.It can interfere with the course
+                                of treatement and can also spoil the case.HomeoKart is one stop solution wherein you can
+                                seek the help from the best at your footstep.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <img src="Images/6.jpeg">
+                            <p>Homoeopathy is highly scientific and extremely effective method of healing. It offers
+                                long lasting to permanent cure, treating the disease from its roots, for most of the
+                                ailments.
+                                We believe in healing with homeopathy.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="features-section">
+            <div class="features">
+                <h1>Why Homeopathy?</h1>
+                <!-- <h1>Powered by Technology</h1> -->
+
+                <p>Homeopathy cures a greater percentage of cases than any other method of treatment. Homeopathy is
+                    the latest and refined method of treating patients economically and non-violently.</p>
+            </div>
+            <div class="row1-container">
+                <div class="box box-down cyan">
+                    <!-- <h2>Supervisor</h2> -->
+                    <p>Homoeopathy is highly scientific and extremely effective method of healing. It offers
+                        long lasting to permanent cure, treating the disease from its roots, for most of the
+                        ailments.</p>
+                    <div class="features-img-div">
+                        <img src="/images/homeopathy (1).png" alt="">
+                    </div>
+                </div>
+
+                <div class="box red">
+                    <!-- <h2>Team Builder</h2> -->
+                    <p>Homeopathic treatment is becoming more popular on account of its low cost and efficiancy.
+                        Especially after the pandemic number of people using homeopathy have increased.
+                    </p>
+                    <div class="features-img-div">
+                        <img src="/images/homeopathy (2).png" alt="">
+                    </div>
+                </div>
+
+                <div class="box box-down blue">
+                    <!-- <h2>Calculator</h2> -->
+                    <p>Self prescribing without doctor's concern is never safe.It can interfere with the course
+                        of treatement and can also spoil the case.</p>
+                    <div class="features-img-div">
+                        <img src="/images/homeopathy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row2-container">
+                <div class="box orange">
+                    <!-- <h2>Karma</h2> -->
+                    <p> HomeoKart ensures fast and easy service of homeopathic medicine at your doorstep. It is
+                        one stop solution wherein you can seek the help from the best at your footstep.</p>
+                    <p>We believe in healing with homeopathy.</p>
+                    <div class="features-img-div">
+                        <img src="/images/medicine.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ORDER MEDICINES -->
+        <section class="product-section">
+            <h2>ORDER MEDICINES</h2>
+            <hr>
+            <div class="row">
+                <% allProducts.forEach(function(prd) { %>
+                <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+                    <div class="product-card-inner">
+                        <a href="/product/<%= prd._id %>">
+                            <div class="product-card-img">
+                                <img src="/<%=prd.img.path[0]%>" loading="lazy" alt="" />
+                            </div>
+
+                            <p class="product-brand">
+                                <%= prd.man_name %>
+                            </p>
+                            <h5>
+                                <%= prd.name.slice(0,20) %><%=
+                                    prd.name.length >20 ? "..." : ""
+                                    %>
+                            </h5>
+                            <p class="product-price">
+                                <span class="new-price">Rs. <%= prd.price %></span>
+                            </p>
+                        </a>
+                        <% let flag = 0; %>
+                        <% for(let i=0; i<productsInCart.length; i++){ %>
+                        <% if(prd._id == productsInCart[i]){ %>
+                        <% flag = 1; %>
+                        <% break; %>
+                        <% }} %>
+
+                        <% if(flag == 0){ %>
+                        <a href="/cart/<%= prd._id %>">
+                            <button type="button" class="btn btn-warning">
+                                ADD TO CART
+                            </button>
+                        </a>
+                        <% } else{%>
+                        <!-- <a href=""> -->
+                        <button type="button" class="btn btn-dark">
+                            ADDED TO CART
+                        </button>
+                        <!-- </a> -->
+                        <% } %>
+                    </div>
+                </div>
+                <% }); %>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 view-all-div">
+                    <a href="/categories">
+                        VIEW ALL MEDICINES <i class="bi bi-chevron-double-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ALL CATEGORIES SECTION -->
+        <section id="all-medicine-categories" class="product-section">
+            <!-- <h2>MEDICINE CATEGORIES</h2> -->
+            <h2>SHOP BY CATEGORY</h2>
+            <hr>
+            <div class="row">
+                <% for(var i=0; i<category.length-1; i++) { %>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="category-card">
+                        <div class="category-card-img-div">
+                            <img src=<%= category[i].img %> loading="lazy" class="category-card-img">
+                        </div>
+                        <div class="category-card-body">
+                            <h4 class="category-card-title"><%=category[i].name%></h4>
+                            <a href="/products/<%= category[i].name %>">
+                                <button class="btn btn-warning">SEARCH</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- DOCTOR CARDS SECTION -->
+        <section id="doctors" class="doctors product-section">
+            <div class="container">
+                <div class="">
+                    <h2>CONSULT DOCTORS</h2>
+                    <hr>
+                    <!-- <p>
+                        Magnam dolores commodi suscipit. Necessitatibus eius
+                        consequatur ex aliquid fuga eum quidem. Sit sint consectetur
+                        velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                        impedit suscipit alias ea. Quia fugiat sit in iste officiis
+                        commodi quidem hic quas.
+                    </p> -->
+                </div>
+
+                <div class="row">
+                    <!-- <div class="col-lg-6">
+                        <div class="member d-flex align-items-start">
+                            <div class="pic">
+                                <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="" />
+                            </div>
+                            <div class="member-info">
+                                <h4>Walter White</h4>
+                                <span>Chief Medical Officer</span>
+                                <p>
+                                    Explicabo voluptatem mollitia et repellat qui
+                                    dolorum quasi
+                                </p>
+                                <div class="social">
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                    <a href=""><i class="fa fa-facebook"></i></a>
+                                    <a href=""><i class="fa fa-instagram"></i></a>
+                                    <a href=""><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+
+
+
+                    <% for(let i=0; i<docData.length; i++){ %>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="member d-flex align-items-center">
+                            <div class="pic">
+                                <img src=<%= docImages[i] %> class="img-fluid" alt="" />
+                            </div>
+                            <!-- <div class="doctor-ratings">
+                                    <i class="fa fa-solid fa-star"></i>
+                                    <h6><%= docData[i].ratings %>/5</h6>
+                            </div> -->
+                            <div class="member-info">
+                                <h4><%= docData[i].username %></h4>
+                                <span><%= docData[i].department %></span>
+                                <p>
+                                    <%= docData[i].description %>
+                                </p>
+                                <div class="social">
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                    <a href=""><i class="fa fa-facebook"></i></a>
+                                    <a href=""><i class="fa fa-instagram"></i></a>
+                                    <a href=""><i class="fa fa-linkedin"></i></a>
+                                </div>
+                                <a href="/consultation" type="button" class="btn-grad">Request Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <!-- <%- include('partials/footer') %> -->
+
+    <!-- FOOTER STARTS -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Homeokart</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br><br>
+                            <strong>Email:</strong>Homeokart007@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="fa fa-solid fa-angle-right"></i> <a href="/">Home</a></li>
+                            <li><i class="fa fa-solid fa-angle-right"></i> <a href="/categories">Medicines</a></li>
+                            <li><i class="fa fa-solid fa-angle-right"></i> <a href="/consultation">Consultation</a></li>
+                            <li><i class="fa fa-solid fa-angle-right"></i> <a href="/myProfile">My Profile</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <% for(var i=0; i<category.length; i++) { %>
+                            <li><i class="fa fa-solid fa-angle-right"></i> <a
+                                    href="/products/<%=category[i].name%>"><%=category[i].name%></a></li>
+                            <% } %>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Homeokart</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="#">HomeoKart</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER ENDS -->
+
+    <!-- <div id="preloader"></div> -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>         -->
+    <!-- Vendor JS Files -->
+    <script src="/CSS/vendor/purecounter/purecounter.js"></script>
+    <script src="/CSS/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/CSS/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/CSS/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/CSS/vendor/php-email-form/validate.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- <script>
+        const productContainers = [...document.querySelectorAll('.product-container')];
+        const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+        const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+        productContainers.forEach((item, i) => {
+            let containerDimensions = item.getBoundingClientRect();
+            let containerWidth = containerDimensions.width;
+
+            nxtBtn[i].addEventListener('click', () => {
+                item.scrollLeft += containerWidth;
+            })
+
+            preBtn[i].addEventListener('click', () => {
+                item.scrollLeft -= containerWidth;
+            })
+        })
+    </script> -->
+</body>
+
+</html>

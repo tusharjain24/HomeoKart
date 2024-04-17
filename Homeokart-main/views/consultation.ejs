@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctors</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/CSS/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/CSS/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/CSS/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/CSS/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- CSS File -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/card.css" rel="stylesheet"> -->
+
+    <!-- CSS File -->
+    <link href="/CSS/consultation.css" rel="stylesheet">
+    <link href="/CSS/navbarFooter.css" rel="stylesheet" />
+
+
+
+
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <!-- <%- include('partials/header',{isAuthenticated:isAuthenticated}) %> -->
+
+
+
+
+
+    <!-- NAVBAR STARTS -->
+    <header id="header" class="fixed-top">
+        <div class="container header-container">
+
+            <h1 class="logo me-auto"><a href="/">HomeoKart</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/categories">Medicines</a></li>
+                    <li><a class="nav-link scrollto" href="/consultation">Doctors</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="/uploadData">UploadData</a></li> -->
+                    <li><a class="nav-link scrollto" href="/cart">Cart</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/room">ROOM</a></li>
+                            <li><a href="/docProfile/623607e3060c92c64c4d18fd">Doctor profile</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li><a class="nav-link scrollto" href="/myProfile">My Profile</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href=<%= isAuthenticated ? "/logout" : "/login" %>
+                class="appointment-btn scrollto"><%= isAuthenticated ? "Logout" : "Login" %></a>
+
+        </div>
+    </header>
+    <!-- NAVBAR ENDS -->
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <!-- cards section
+        <div class="container-fluid card-sec-1" style="margin-top:200px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="inam" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;margin: auto;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;margin: auto;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="card" style="width: 300px;">
+                                                <img src="images/9.jpg" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
+                                                    <p class="card-text">Skin masks help us to make are skin fresh and
+                                                        also they protect our skin from the harm rays of sun</p>
+                                                    <button type="button" class="btn btn-warning">Read More</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+    
+                        </div>
+                        <a href="#inam" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a href="#inam" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div> -->
+        <!-- End card  section -->
+
+
+
+
+
+        <!--  Appointment Section  -->
+
+        <!-- FORM -->
+
+        <div class="container" id="appointment-div">
+            <!-- <h2 class="text-center">Contac Form</h2> -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 pb-5">
+                    <form action="/consultation" method="post">
+                        <div class="carrd border-primary rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-info text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Make an Appointment</h3>
+                                    <!-- <p class="m-0">Magnam dolores commodi suscipit. Necessitatibus eius
+                                                consequatur ex aliquid fuga eum quidem. Sit sint consectetur
+                                                velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                                                impedit suscipit alias ea. Quia fugiat sit in iste officiis
+                                                commodi quidem hic quas.</p> -->
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <!-- <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Your Name" data-rule="minlen:4"
+                                            data-msg="Please enter at least 4 chars" required> -->
+                                        <div class="form-floating">
+                                            <input required type="text" id="name" name="name" class="form-control"
+                                                placeholder="Full name">
+                                            <label for="name">FULL NAME</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i>
+                                            </div>
+                                        </div>
+                                        <!-- <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Your Email" data-rule="email"
+                                            data-msg="Please enter a valid email" required> -->
+                                        <div class="form-floating">
+                                            <input required type="email" class="form-control" id="email" name="email"
+                                                placeholder="name@example.com">
+                                            <label for="email">Email address</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa-solid fa-phone text-info"></i>
+                                            </div>
+                                        </div>
+                                        <!-- <input type="tel" class="form-control" name="phone" id="phone"
+                                            placeholder="Your Phone" data-rule="minlen:4"
+                                            data-msg="Please enter at least 4 chars" /> -->
+                                        <div class="form-floating">
+                                            <input required type="tel" id="phone" name="phone" class="form-control"
+                                                placeholder="Phone Number" pattern="[6-9]{1}[0-9]{9}">
+                                            <label for="phone">PHONE NUMBER</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i
+                                                    class="fa-solid fa-person-circle-question text-info"></i>
+                                            </div>
+                                        </div>
+                                        <!-- <input type="number" class="form-control" name="age" id="age"
+                                            placeholder="Your Age" min=18 data-msg="Please enter at least 1 chars" /> -->
+                                        <div class="form-floating">
+                                            <input required type="number" min="18" max="100" id="age" name="age"
+                                                class="form-control" placeholder="Age" />
+                                            <label for="age">AGE</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i
+                                                    class="fa-solid fa-venus-mars text-info"></i>
+                                            </div>
+                                        </div>
+                                        <!-- <input type="text" name="gender" class="form-control" id="gender"
+                                            placeholder="Your Gender" data-rule="minlen:1"
+                                            data-msg="Please enter at least 1 chars" /> -->
+                                        <select class="form-select" aria-label="Gender" id="gender" name="gender"
+                                            required>
+                                            <option selected value="">SELECT GENDER</option>
+                                            <option value="MALE">MALE</option>
+                                            <option value="FEMALE">FEMALE</option>
+                                            <option value="OTHERS">OTHERS</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i
+                                                    class="fa-solid fa-venus-mars text-info"></i>
+                                            </div>
+                                        </div>
+                                        <input type="text" name="history" class="form-control" id="history"
+                                            placeholder="Your Medical History"
+                                            data-msg="Please enter at least 1 chars" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i
+                                                    class="fa-solid fa-building-user text-info"></i>
+                                            </div>
+                                        </div>
+                                        <select name="department" id="department" class="form-select" required>
+                                            <option value="">Select Department</option>
+                                            <option value="Orthopedic">Orthopedic</option>
+                                            <option value="Gynaecologist">Gynaecologist</option>
+                                            <option value="Dermatologist">Dermatologist</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i>
+                                            </div>
+                                        </div>
+                                        <textarea class="form-control" name="comments" rows="3"
+                                            placeholder="Message for doctor (optional)"></textarea>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <!-- <input type="submit"
+                                            class="btn btn-info btn-block rounded-0 py-2"> -->
+
+                                    <button class="btn btn-info btn-block rounded-0 py-2" type="submit">
+                                        <!-- Make an Appointment -->
+                                        Submit
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- </section> -->
+        <!-- End Appointment Section -->
+
+
+
+
+        <!--  Doctors Section  -->
+
+
+        <section class="details-card" id="doctor-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="doctor-head">Doctors</h2>
+                    <p>
+                        Magnam dolores commodi suscipit. Necessitatibus eius
+                        consequatur ex aliquid fuga eum quidem. Sit sint consectetur
+                        velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                        impedit suscipit alias ea. Quia fugiat sit in iste officiis
+                        commodi quidem hic quas.
+                    </p>
+                </div>
+                <div class="row">
+
+                    <% docData.forEach(function(doc) {%>
+                    <div class="doc-card col-md-3">
+                        <div class="card-content">
+                            <div class="card-img">
+                                <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" loading="lazy" alt="" />
+                                <span>
+                                    <h4>
+                                        <i class="fa-solid fa-star"></i>
+                                        <%=doc.ratings%>/5
+                                    </h4>
+                                </span>
+                            </div>
+                            <div class="card-desc">
+                                <h3><%=doc.username%></h3>
+                                <h4><%=doc.department%></h4>
+                                <p> <%=doc.description%></p>
+                            </div>
+                            <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                        </div>
+                    </div>
+                    <% })%>
+                    <!-- <div class="col-md-3">
+                            <div class="card-content">
+                                <div class="card-img">
+                                    <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="" />
+                                    <span><h4>
+                                        <i class="fa-solid fa-star"></i>
+                                        4.5/5
+                                    </h4></span>
+                                </div>
+                                <div class="card-desc">
+                                    <h3>Sarah Jhonson</h3>
+                                    <h4>Anesthesiologist</h4>
+                                    <p>
+                                        Aut maiores voluptates amet et quis praesentium
+                                        qui senda para</p>
+                                          <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-content">
+                                <div class="card-img">
+                                    <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="" />
+                                    <span><h4>
+                                        <i class="fa-solid fa-star"></i>
+                                        4/5
+                                    </h4></span>
+                                </div>
+                                <div class="card-desc">
+                                    <h3>William Anderson</h3>
+                                    <h4>Cardiology</h4>
+                                    <p>Quisquam facilis cum velit laborum corrupti fuga
+                                        rerum quia</p>
+                                         <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card-content">
+                                <div class="card-img">
+                                    <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt="" />
+                                    <span><h4>
+                                        <i class="fa-solid fa-star"></i>
+                                        3/5
+                                    </h4></span>
+                                </div>
+                                <div class="card-desc">
+                                    <h3>Amanda Jepson</h3>
+                                    <h4>Neurosurgeon</h4>
+                                    <p>Dolorum tempora officiis odit laborum officiis
+                                        et et accusamus</p>
+                                        <div class="button-div"><a href="#" class="btn-card">Request Consultation</a></div>
+                                        
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <!-- End Doctors Section -->
+
+
+        <!--  Contact Section  -->
+        <!-- <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>
+                        Magnam dolores commodi suscipit. Necessitatibus eius
+                        consequatur ex aliquid fuga eum quidem. Sit sint consectetur
+                        velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                        impedit suscipit alias ea. Quia fugiat sit in iste officiis
+                        commodi quidem hic quas.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <iframe style="border: 0; width: 100%; height: 350px"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.7930501716123!2d73.17591371467357!3d22.323665185311356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8cbb1849e4f%3A0x57fbad12488b0544!2sPolytechnic%20M%20S%20University!5e0!3m2!1sen!2sin!4v1646978705361!5m2!1sen!2sin"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+91 55895 55488</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- Footer  -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Homeokart</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br><br>
+                            <strong>Email:</strong>Homeokart007@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/categories">Medicines</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/consultation">Doctors</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/cart">Cart</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <% for(var i=0; i<category.length; i++) { %>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/products/<%=category[i].name%>"><%=category[i].name%></a></li>
+                            <% } %>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Homeokart</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="#">HomeoKart</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- <%- include('partials/footer') %> -->
+</body>
+
+</html>

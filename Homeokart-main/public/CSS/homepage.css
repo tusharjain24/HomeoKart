@@ -1,0 +1,561 @@
+/* .container-fluid {
+    width: 100%;
+    display: flex !important;
+    align-items: space-between !important;
+    justify-content: space-between !important;
+} */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.bod-cont {
+    /* width: 50%; */
+    padding: 0 1rem;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-brand-container {
+    margin: 0 3rem 0 0;
+}
+
+.navbar-brand {
+    font-size: 2rem !important;
+    /* font-weight: 400 !important; */
+    font-family: 'Arima Madurai', cursive !important;
+    padding-left: 15px;
+    color: rgb(21, 74, 105) ! important;
+    margin: auto !important;
+}
+
+.navbar-nav .nav-link {
+    padding: 0 !important;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* .items {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+} */
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-around {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .flex-around .d-flex {} */
+
+.flex-around hr {
+    display: none;
+}
+
+.navbar-collapse {
+    /* flex-grow: 0 !important; */
+    margin: auto !important;
+}
+
+.item1 {
+    margin: 20px 60px !important;
+}
+
+.item2 {
+    margin: 0px 30px;
+}
+
+.search-bar {
+    width: 37vw !important;
+    /* height: 50px !important; */
+    border: 1px solid black;
+    box-shadow: none !important;
+    /* height: fit-content; */
+    /* padding: 10px 15px !important; */
+    /* font-size: 20px !important; */
+    font-size: 1rem;
+
+}
+
+/* .search-bar:focus {
+    outline: none !important;
+    -webkit-appearance: none !important;
+} */
+
+.logo {
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 15px;
+    padding-top: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 0px;
+}
+
+.card {
+    /* margin-top: 100px;
+    margin-left: 20px; */
+    width: 18rem;
+}
+
+.item2 .btn {
+    /* width: 150px !important; */
+    /* font-size: 20px !important; */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* .nav-right-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+} */
+
+.item3 {
+    padding: 0px 30px !important;
+    /* font-size: 20px !important; */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+
+
+.vertical {
+    border: 2px solid rgb(161, 161, 161);
+    position: absolute;
+    height: 100px;
+}
+
+/* .flex-container-category {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .lead {
+    display: flex;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    margin-left: 5px;
+    height: max-content;
+    align-items: center;
+
+} */
+
+#health-care-pro {
+    height: 10rem;
+}
+
+
+
+.banner-container {
+    position: relative;
+    top: 80px;
+}
+
+.w-100 {
+    height: 350px !important;
+}
+
+.site-wrap .card {
+    /* box-shadow: 0 1px 2px rgba(0,0,0,0.15); */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    /* opacity: 0; */
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.site-wrap .card:hover {
+
+    /* box-shadow: 5px 10px #c2bfbf; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100% !important;
+    height: 200px !important;
+    border-radius: 15px 15px 0 0;
+
+    /* border-radius: 20px; */
+}
+
+.site-wrap {
+    /* max-width: 700px; */
+    margin-top: 150px;
+
+    /* padding: 10rem 2rem; */
+}
+
+section {
+    /* margin-bottom: 10rem; */
+    /* padding: 4rem; */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);
+    display: flex;
+    flex-direction: row;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+[data-scroll] {
+    opacity: 0;
+    will-change: transform, scale, opacity;
+    transform: translateY(6rem) scale(0.93);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+[data-scroll=in] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    /* transform: translateY(0) scale(1); */
+}
+
+.splitting .char {
+    color: transparent;
+}
+
+.splitting .char:after {
+    visibility: visible;
+    color: #204754;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: calc(.2s + (.04s * var(--char-index)));
+}
+
+[data-scroll=in] .char:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Why homeokart section */
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px 20px;
+}
+
+.para {
+    /* padding: 20px; */
+    margin: 20px;
+    width: fit-content;
+    /* width: 650px; */
+}
+
+.para .lead {
+    font-size: 1.6vmax;
+    text-align: justify;
+    /* font-size: 1.2rem; */
+    font-weight: 500px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.para-img {
+    margin: 20px;
+    max-width: 100%;
+    /* width: 100%; */
+}
+
+.about-homeokart {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.intro1 {
+    margin: 20px auto;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+/* Order from categories section */
+
+.flex-container-category {
+    /* width: 100%; */
+    /* padding: 0px 250px; */
+    margin: auto;
+    /* height: ; */
+    width: 80%;
+    /* padding-top: 20px; */
+    text-align: center;
+}
+
+
+
+.crd a {
+    text-decoration: none;
+}
+
+/* .slick-slide {
+    width: 300px !important;
+} */
+
+.crd {
+    width: 300px !important;
+    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 30px;
+    /* background-color: lightyellow; */
+}
+
+.crd-body img {
+    width: 300px !important;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.crd-title {
+    /* margin: auto !important; */
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px;
+    text-decoration: none !important;
+    color: black;
+}
+
+.crd-bton {
+    margin: 20px auto !important;
+    width: fit-content;
+}
+
+.crd-bton .btn-primary {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.slick-prev {
+    /* display:block; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    background-color: #e3f2fd;
+
+}
+
+/* Footer Section */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+    background-color: #ecf8ff;
+    /* height: 50vh; */
+    padding: 0 2rem 4rem;
+    margin: 500px auto 0;
+}
+
+.footer-container hr {
+    width: 60%;
+    margin: auto;
+}
+
+.footer {
+    /* width: 80%; */
+    /*  */
+    color: black;
+    display: flex;
+
+    justify-content: space-around;
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
+    margin: 4rem auto 0;
+}
+
+.footer-brand-container {
+    text-decoration: none;
+    padding: 0 0 3rem;
+}
+
+.footer-brand-container a {
+    color: rgb(21, 74, 105);
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading h2 {
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-heading a {
+    color: #121212;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover {
+    color: rgb(243, 39, 39);
+    transition: all 0.3s ease;
+}
+
+
+
+
+.logo {
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0 0 0 1rem;
+    font-weight: 500;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Arima Madurai', cursive;
+}
+
+.copyright {
+    margin: auto;
+    color: #979797;
+    padding: 3rem 0 0;
+    width: 70%;
+    font-weight: 400;
+}
+
+.copyright .copyright-symbol {
+    text-align: center;
+    padding: 0 0 1rem;
+}
+
+.copyright .copyright-symbol i {
+    color: red;
+}
+
+@media (max-width: 992px) {
+
+    .nav-brand-container {
+        margin: 0 1rem 0 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 3rem 0 1rem;
+    }
+
+    .flex-around hr {
+        display: block;
+        color: #121212;
+        width: 100vh;
+        border: none;
+        /* margin: auto; */
+    }
+
+    .flex-around {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+
+    .second {
+        flex-direction: column;
+    }
+
+    .first,
+    .third {
+        flex-direction: column-reverse;
+    }
+
+    .flex-container {
+        width: fit-content !important;
+        justify-content: center !important;
+    }
+
+    /* .navbar-expand-lg .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    } */
+
+    .item1 {
+        padding: 0.5rem 0 !important;
+    }
+
+    .nav-link {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1316px) {}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        text-align: center;
+        margin: 0;
+        display: block;
+        align-items: center;
+    }
+
+    .flex-container-category {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .para-img {
+        margin: 20px 0;
+    }
+
+}
