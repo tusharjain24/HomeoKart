@@ -51,13 +51,10 @@ To get started with HomeoKart:
 
 - [Tushar Jain](https://www.github.com/tusharjain24)
 - [Smit Bhamwala](https://github.com/SmitBhamwala)
-- [Shivam Barot]()
+- [Shivam Barot](https://github.com/ShivamBarot2602)
+- [Vagisha Kumar](https://github.com/vagishakumar)
 
 
 ## Deployment
 
 - Live Link (https://homeokart.onrender.com/)
-
-
-## Acknowledgements
-Special thanks to **Vagisha Kumar** for their contributions and support during the development of HomeoKart.
